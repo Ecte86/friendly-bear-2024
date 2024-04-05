@@ -1,4 +1,4 @@
-PROJECT=friendlyBear
+PROJECT=friendly-bear
 CC=oscar64
 SRCDIR=src
 SOURCES=$(wildcard $(SRCDIR)/*.c*)

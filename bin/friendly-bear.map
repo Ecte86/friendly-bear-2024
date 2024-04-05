@@ -1,0 +1,56 @@
+sections
+0880 - 0a04 : DATA, code
+0a04 - 0abd : DATA, data
+0abd - 0abf : BSS, bss
+0ac0 - 9000 : HEAP, heap
+9000 - 9ff2 : STACK, stack
+00f7 - 00f7 : ZEROPAGE, zeropage
+0801 - 0863 : DATA, startup
+9ffe - a000 : SSTACK, sstack
+9ffe - 9ffe : SSTACK, BearSprite::+BearSprite@stack
+9ffe - 9ffe : SSTACK, spr_init@stack
+9ffe - 9ffe : SSTACK, spr_set@stack
+9ffe - 9ffe : SSTACK, BearSprite::setupSprite@stack
+9ffe - 9ffe : SSTACK, BearSprite::~BearSprite@stack
+9ff2 - 9ffe : SSTACK, main@stack
+
+regions
+00f7 - 00ff : 0000, 0000, zeropage
+0801 - 0880 : 0863, 0062, startup
+0880 - 9000 : 0abd, 023f, main
+
+objects
+00f7 - 00f7 : ZeroEnd, END:zeropage
+00f7 - 00f7 : ZeroStart, START:zeropage
+0801 - 0863 : startup, NATIVE_CODE:startup
+0880 - 089f : main, NATIVE_CODE:code
+089f - 08d8 : BearSprite::+BearSprite, NATIVE_CODE:code
+08d8 - 0968 : BearSprite::setupSprite, NATIVE_CODE:code
+0968 - 0a04 : spr_set, NATIVE_CODE:code
+0a04 - 0a05 : spentry, DATA:data
+0a05 - 0a85 : sp_data, DATA:data
+0a85 - 0abd : bitshift, DATA:data
+0abd - 0abd : BSSStart, START:bss
+0abd - 0abf : vspriteScreen, DATA:bss
+0abf - 0abf : BSSEnd, END:bss
+9ff2 - 9ffe : fb, BSS:main@stack
+9ff2 - 9ff2 : StackEnd, END:stack
+9ffe - a000 : sstack, STACK:sstack
+
+objects by size
+0968 (009c) : spr_set, NATIVE_CODE:code
+08d8 (0090) : BearSprite::setupSprite, NATIVE_CODE:code
+0a05 (0080) : sp_data, DATA:data
+0801 (0062) : startup, NATIVE_CODE:startup
+089f (0039) : BearSprite::+BearSprite, NATIVE_CODE:code
+0a85 (0038) : bitshift, DATA:data
+0880 (001f) : main, NATIVE_CODE:code
+9ff2 (000c) : fb, BSS:main@stack
+0abd (0002) : vspriteScreen, DATA:bss
+9ffe (0002) : sstack, STACK:sstack
+0a04 (0001) : spentry, DATA:data
+00f7 (0000) : ZeroEnd, END:zeropage
+00f7 (0000) : ZeroStart, START:zeropage
+0abd (0000) : BSSStart, START:bss
+0abf (0000) : BSSEnd, END:bss
+9ff2 (0000) : StackEnd, END:stack

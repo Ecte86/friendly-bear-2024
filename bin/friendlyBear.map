@@ -1,0 +1,71 @@
+sections
+0880 - 0b2c : DATA, code
+0b2c - 0be5 : DATA, data
+0be5 - 0beb : BSS, bss
+0bf0 - 9000 : HEAP, heap
+9000 - 9ff4 : STACK, stack
+00f7 - 00f7 : ZEROPAGE, zeropage
+0801 - 0863 : DATA, startup
+9ffe - a000 : SSTACK, sstack
+9ffe - 9ffe : SSTACK, SpritePosition::+SpritePosition@stack
+9ffe - 9ffe : SSTACK, BearSprite::+BearSprite@stack
+9ffe - 9ffe : SSTACK, spr_init@stack
+9ffe - 9ffe : SSTACK, SpritePosition::getX@stack
+9ffe - 9ffe : SSTACK, SpritePosition::getY@stack
+9ffe - 9ffe : SSTACK, spr_set@stack
+9ffe - 9ffe : SSTACK, BearSprite::setupSprite@stack
+9ffe - 9ffe : SSTACK, BearSprite::~BearSprite@stack
+9ff4 - 9ffe : SSTACK, main@stack
+
+regions
+00f7 - 00ff : 0000, 0000, zeropage
+0801 - 0880 : 0863, 0062, startup
+0880 - 9000 : 0be5, 036b, main
+
+objects
+00f7 - 00f7 : ZeroStart, START:zeropage
+00f7 - 00f7 : ZeroEnd, END:zeropage
+0801 - 0863 : startup, NATIVE_CODE:startup
+0880 - 089f : main, NATIVE_CODE:code
+089f - 08f8 : BearSprite::+BearSprite, NATIVE_CODE:code
+08f8 - 09b9 : BearSprite::setupSprite, NATIVE_CODE:code
+09b9 - 09c5 : SpritePosition::getX, NATIVE_CODE:code
+09c5 - 09d1 : SpritePosition::getY, NATIVE_CODE:code
+09d1 - 0a6d : spr_set, NATIVE_CODE:code
+0a6d - 0b2c : malloc, NATIVE_CODE:code
+0b2c - 0b2d : spentry, DATA:data
+0b2d - 0bad : sp_data, DATA:data
+0bad - 0be5 : bitshift, DATA:data
+0be5 - 0be7 : vspriteScreen, DATA:bss
+0be5 - 0be5 : BSSStart, START:bss
+0be7 - 0beb : HeapNode, DATA:bss
+0beb - 0beb : BSSEnd, END:bss
+0bf0 - 0bf0 : HeapStart, START:heap
+9000 - 9000 : HeapEnd, END:heap
+9ff4 - 9ffe : b, BSS:main@stack
+9ff4 - 9ff4 : StackEnd, END:stack
+9ffe - a000 : sstack, STACK:sstack
+
+objects by size
+08f8 (00c1) : BearSprite::setupSprite, NATIVE_CODE:code
+0a6d (00bf) : malloc, NATIVE_CODE:code
+09d1 (009c) : spr_set, NATIVE_CODE:code
+0b2d (0080) : sp_data, DATA:data
+0801 (0062) : startup, NATIVE_CODE:startup
+089f (0059) : BearSprite::+BearSprite, NATIVE_CODE:code
+0bad (0038) : bitshift, DATA:data
+0880 (001f) : main, NATIVE_CODE:code
+09b9 (000c) : SpritePosition::getX, NATIVE_CODE:code
+09c5 (000c) : SpritePosition::getY, NATIVE_CODE:code
+9ff4 (000a) : b, BSS:main@stack
+0be7 (0004) : HeapNode, DATA:bss
+0be5 (0002) : vspriteScreen, DATA:bss
+9ffe (0002) : sstack, STACK:sstack
+0b2c (0001) : spentry, DATA:data
+00f7 (0000) : ZeroStart, START:zeropage
+00f7 (0000) : ZeroEnd, END:zeropage
+0be5 (0000) : BSSStart, START:bss
+0beb (0000) : BSSEnd, END:bss
+0bf0 (0000) : HeapStart, START:heap
+9000 (0000) : HeapEnd, END:heap
+9ff4 (0000) : StackEnd, END:stack

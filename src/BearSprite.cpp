@@ -1,11 +1,15 @@
 #include "../include/BearSprite.hpp"  //NOLINT
-
+#include "../include/spriteData/bear.hpp"  //NOLINT
 BearSprite::BearSprite() {
-    this->spriteData =  (byte *)sp_data;
-    this->position = new SpritePosition(160, 100);
-    this->spriteAddr = (byte *)0x0380;
+    this->spriteData = sp_data;
+
+    this->x = 0;
+    this->y = 0;
+
+    this->spriteAddr = SpriteData;
     this->spriteAddr_2 = this->spriteAddr + 64;
-    this->screenAddr = (byte *)0x0400;
+    this->screenAddr = (char *)0x0400;
+    
 }
 
 void BearSprite::setupSprite() {
@@ -13,35 +17,49 @@ void BearSprite::setupSprite() {
 
     spr_init((char *)this->screenAddr);
 
-    this->position = new SpritePosition(160, 100);
+    this->x = 160;
+    this->y = 100;
 
-    char *spriteAddr_ch = (char *)this->spriteAddr;
-    char *spriteAddr_2_ch = (char *)this->spriteAddr_2;
-    spr_set(
-        0,
-        true,
-        this->position->getX(),
-        this->position->getY(),
-        spriteAddr_2_ch[0],
-        VCOL_BLACK,
-        false,
-        false,
-        false
-    );
-    spr_set(
-        1,
-        true,
-        this->position->getX(),
-        this->position->getY(),
-        spriteAddr_ch[0],
-        VCOL_BLACK,
-        false,
-        false,
-        false
-    );
+    int pX = this->x;
+    int pY = this->y;
+
+    spr_set(0, true, pX, pY, (SpriteAddr + 64) / 64,  VCOL_BLACK, false, false, false);
+    spr_set(1, true, pX, pY,        SpriteAddr / 64, VCOL_ORANGE, true,  false, false);
 
     vic.spr_mcolor0 = VCOL_BROWN;
     vic.spr_mcolor1 = VCOL_WHITE;
+}
+
+int BearSprite::getX() {
+    return this->x;
+}
+
+int BearSprite::getY() {
+    return this->y;
+}
+
+void BearSprite::setX(int x) {
+    this->x = x;
+}
+
+void BearSprite::setY(int y) {
+    this->y = y;
+}
+
+void BearSprite::move(int x, int y) {
+    this->x = x;
+    this->y = y;
+
+    spr_move(0, x, y);
+    spr_move(1, x, y);
+}
+
+void BearSprite::moveRelative(int x, int y) {
+    this->x += x;
+    this->y += y;
+
+    spr_move(0, this->x, this->y);
+    spr_move(1, this->x, this->y);
 }
 
 BearSprite::~BearSprite() {}

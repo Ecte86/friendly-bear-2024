@@ -8,20 +8,34 @@
 #include <c64/vic.h>
 #include <string.h>
 
-// IGNORENEXTLINE
-#include "spriteData/bear.hpp"  //NOLINT
-#include "SpritePosition.hpp"
+#define SpriteAddr             0x0380
+#define SpriteData    ((char *)SpriteAddr)
+
 class BearSprite {
   private:
-    byte *spriteData;
-    const byte *spriteAddr;
-    const byte *spriteAddr_2;
-    const byte *screenAddr;
-    SpritePosition *position;
+    char *spriteData;
+    char *spriteAddr;
+    char *spriteAddr_2;
+    char *screenAddr;
+    int x;
+    int y;
   public:
     BearSprite();
     void setupSprite();
+    
+    int getX();
+    int getY();
+
+    void setX(int x);
+    void setY(int y);
+
+    void move(int x, int y);
+    void moveRelative(int x, int y);
+
+    void show();
+    void hide();
+
     ~BearSprite();
 };
 
-#endif
+#endif /* BEARSPRITE_HPP */

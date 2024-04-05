@@ -1,0 +1,16 @@
+al 00f7 .ZeroEnd
+al 00f7 .ZeroStart
+al 0801 .startup
+al 0880 .main
+al 089f .BearSprite::+BearSprite
+al 08d8 .BearSprite::setupSprite
+al 0968 .spr_set
+al 0a04 .spentry
+al 0a05 .sp_data
+al 0a85 .bitshift
+al 0abd .BSSStart
+al 0abd .vspriteScreen
+al 0abf .BSSEnd
+al 9ff2 .fb
+al 9ff2 .StackEnd
+al 9ffe .sstack
