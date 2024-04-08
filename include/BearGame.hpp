@@ -1,33 +1,48 @@
-#ifndef BEARGAME_HPP
-#define BEARGAME_HPP
+#ifndef BEARGAME
+#define BEARGAME
 
 #pragma once
 
-#include "GameState.hpp"
-#include "BearSprite.hpp"
+#include <c64/charwin.h>
 
-class BearGame
-{
-private:
+#include "BearSprite.hpp"
+#include "GameState.hpp"
+#include "JoyDirection.hpp"
+
+#include "Scores.hpp"
+
+class BearGame {
+  private:
     GameState gameState;
     PlayState playState;
     BearSprite *bearSprite;
     int level;
-    int score;  // 10 points for food item. 100 points for going off screen (secret!)
-public:
-    BearGame();
+    Score score;  // 10 points for food item. 100 points for going off screen (secret!)
+    JoyDirection joyDirection;
+    CharWin *charWin;
 
+  public:
+    BearGame();
     void setup();
     void play();
     void gameOver();
     void gameWon();
+
     void setGameState(GameState gameState);
     GameState getGameState();
+
     void setPlayState(PlayState playState);
     PlayState getPlayState();
 
-    ~BearGame();
+    void getUserInput();
 
+    void updateGame();
+
+    int getLevel();
+
+    int getScore();
+
+    ~BearGame();
 };
 
-#endif
+#endif /* BEARGAME */

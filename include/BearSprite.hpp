@@ -21,7 +21,7 @@ class BearSprite {
     int y;
   public:
     BearSprite();
-    void setupSprite();
+    void drawSprite();
     
     int getX();
     int getY();

@@ -12,7 +12,7 @@ BearSprite::BearSprite() {
     
 }
 
-void BearSprite::setupSprite() {
+void BearSprite::drawSprite() {
     memcpy((char *)this->spriteAddr, (char *)this->spriteData, 128);
 
     spr_init((char *)this->screenAddr);
@@ -28,6 +28,8 @@ void BearSprite::setupSprite() {
 
     vic.spr_mcolor0 = VCOL_BROWN;
     vic.spr_mcolor1 = VCOL_WHITE;
+    
+    vic.color_border++;
 }
 
 int BearSprite::getX() {

@@ -1,5 +1,5 @@
 #include <opp/iostream.h>
-#include <string.h>
+#include <opp/string.h>
 #include <c64/sprites.h>
 #include <c64/types.h>
 #include <c64/vic.h>
@@ -7,7 +7,7 @@
 
 using namespace opp;
 
-#include "../include/BearSprite.hpp"
+#include "../include/BearGame.hpp"
 
 /**
  * This is a puzzle-platformer game where the player controls a bear
@@ -19,8 +19,30 @@ using namespace opp;
 */
 
 int main(void) {
-    BearSprite fb;
-    fb.setupSprite();
-
+    BearGame bearGame;
+    clrscr();
+    while (true) {
+        switch (bearGame.getGameState()) {
+            case GameState::SETUP:
+                iocharmap(IOCHM_PETSCII_2);
+                gotoxy(0, 0);
+                cout << "SETUP" << endl;
+                bearGame.setup();
+                bearGame.setGameState(GameState::PLAY);
+                break;
+            case GameState::PLAY:
+                gotoxy(0, 0);
+                ((char *)0x00c7=199);
+                cout << << "Level: " << bearGame.getLevel() << " Score: " << bearGame.getScore() << endl;
+                bearGame.play();
+                break;
+            case GameState::GAME_OVER:
+                bearGame.gameOver();
+                break;
+            case GameState::GAME_WON:
+                bearGame.gameWon();
+                break;
+        }
+    }
     return 0;
 }
