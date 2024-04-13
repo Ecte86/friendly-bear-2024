@@ -49,6 +49,7 @@ void BearSprite::setY(int y) {
 }
 
 void BearSprite::move(int x, int y) {
+    vic.color_back++;
     this->x = x;
     this->y = y;
 
@@ -57,11 +58,17 @@ void BearSprite::move(int x, int y) {
 }
 
 void BearSprite::moveRelative(int x, int y) {
+    vic.color_back++;
     this->x += x;
     this->y += y;
 
     spr_move(0, this->x, this->y);
     spr_move(1, this->x, this->y);
 }
+
+void BearSprite::render() {
+    spr_move(0, this->x, this->y);
+    spr_move(1, this->x, this->y);
+}    
 
 BearSprite::~BearSprite() {}

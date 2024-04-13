@@ -40,16 +40,29 @@ void BearGame::play() {
         case PlayState::GET_USER_INPUT:
             // Check for user input
             this->getUserInput();
+            this->playState = PlayState::UPDATE_GAME;
             break;
         case PlayState::UPDATE_GAME:
             // Update the game
             this->updateGame();
+            this->playState = PlayState::RENDER_GAME;
             break;
         case PlayState::RENDER_GAME:
             // Render the game
-            //this->renderGame();
+            this->renderGame();
+            this->playState = PlayState::GET_USER_INPUT;
+            break;
+        default:
+            this->playState = PlayState::GET_USER_INPUT;
             break;
     }
+}
+
+void BearGame::renderGame() {
+    // Render the game - this happens automatically, but we can change RAM locations
+    // Update the sprite position
+    this->bearSprite->render();
+
 }
 
 void BearGame::getUserInput() {

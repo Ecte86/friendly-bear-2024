@@ -1,9 +1,9 @@
-#include <opp/iostream.h>
-#include <opp/string.h>
 #include <c64/sprites.h>
 #include <c64/types.h>
 #include <c64/vic.h>
 #include <conio.h>
+#include <opp/iostream.h>
+#include <opp/string.h>
 
 using namespace opp;
 
@@ -21,10 +21,10 @@ using namespace opp;
 int main(void) {
     BearGame bearGame;
     clrscr();
+    iocharmap(IOCHM_PETSCII_2);
     while (true) {
         switch (bearGame.getGameState()) {
             case GameState::SETUP:
-                iocharmap(IOCHM_PETSCII_2);
                 gotoxy(0, 0);
                 cout << "SETUP" << endl;
                 bearGame.setup();
@@ -32,8 +32,8 @@ int main(void) {
                 break;
             case GameState::PLAY:
                 gotoxy(0, 0);
-                ((char *)0x00c7=199);
-                cout << << "Level: " << bearGame.getLevel() << " Score: " << bearGame.getScore() << endl;
+                cout << "Level: " << bearGame.getLevel()
+                     << " Score: " << bearGame.getScore() << endl;
                 bearGame.play();
                 break;
             case GameState::GAME_OVER:

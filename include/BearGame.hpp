@@ -38,6 +38,8 @@ class BearGame {
 
     void updateGame();
 
+    void renderGame();
+
     int getLevel();
 
     int getScore();

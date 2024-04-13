@@ -35,6 +35,8 @@ class BearSprite {
     void show();
     void hide();
 
+    void render();
+
     ~BearSprite();
 };
 
