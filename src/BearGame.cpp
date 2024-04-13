@@ -99,9 +99,40 @@ void BearGame::getUserInput() {
     this->joyDirection.setJoyDirection((JoyDirectionX)joyValueX, (JoyDirectionY)joyValueY);
 }
 
+void BearGame::updateBearSpritePosition() {
+    // Update the sprite position
+    int x = this->bearSprite->getX();
+    int y = this->bearSprite->getY();
+
+    switch (this->joyDirection.getJoyDirectionX()) {
+        case JoyDirectionX::LEFT:
+            x -= 1;
+            break;
+        case JoyDirectionX::RIGHT:
+            x += 1;
+            break;
+        default:
+            break;
+    }
+
+    switch (this->joyDirection.getJoyDirectionY()) {
+        case JoyDirectionY::UP:
+            y -= 1;
+            break;
+        case JoyDirectionY::DOWN:
+            y += 1;
+            break;
+        default:
+            break;
+    }
+
+    this->bearSprite->move(x, y);
+}
+
 void BearGame::updateGame() {
     // Update the game 
-
+    // Update the sprite position
+    this->updateBearSpritePosition();
 
     // Check for collisions
     // TODO: Need to implement collision detection

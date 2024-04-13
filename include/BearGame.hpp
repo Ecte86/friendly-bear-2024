@@ -36,6 +36,8 @@ class BearGame {
 
     void getUserInput();
 
+    void updateBearSpritePosition();
+
     void updateGame();
 
     void renderGame();
