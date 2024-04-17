@@ -29,7 +29,13 @@ void BearSprite::drawSprite() {
     vic.spr_mcolor0 = VCOL_BROWN;
     vic.spr_mcolor1 = VCOL_WHITE;
     
-    vic.color_border++;
+}
+
+int *BearSprite::getPos() {
+    int *pos = new int[2];
+    pos[0] = this->x;
+    pos[1] = this->y;
+    return pos;
 }
 
 int BearSprite::getX() {
@@ -49,7 +55,6 @@ void BearSprite::setY(int y) {
 }
 
 void BearSprite::move(int x, int y) {
-    vic.color_back++;
     this->x = x;
     this->y = y;
 
@@ -58,7 +63,6 @@ void BearSprite::move(int x, int y) {
 }
 
 void BearSprite::moveRelative(int x, int y) {
-    vic.color_back++;
     this->x += x;
     this->y += y;
 
@@ -69,6 +73,6 @@ void BearSprite::moveRelative(int x, int y) {
 void BearSprite::render() {
     spr_move(0, this->x, this->y);
     spr_move(1, this->x, this->y);
-}    
+}
 
 BearSprite::~BearSprite() {}

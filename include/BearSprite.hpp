@@ -23,6 +23,7 @@ class BearSprite {
     BearSprite();
     void drawSprite();
     
+    int *getPos();
     int getX();
     int getY();
 

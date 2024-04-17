@@ -11,9 +11,12 @@ enum class GameState {
 };
 
 enum class PlayState {
+    START,
     GET_USER_INPUT,
     UPDATE_GAME,
     RENDER_GAME,
+    END_GAME,
+    WON_GAME
 };
 
 #endif /* GAMESTATE_HPP */

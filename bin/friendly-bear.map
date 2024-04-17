@@ -1,9 +1,9 @@
 sections
-0880 - 16eb : DATA, code
-16eb - 17ea : DATA, data
-17ea - 17ea : BSS, bss
-17f0 - 9000 : HEAP, heap
-9000 - 9fcf : STACK, stack
+0880 - 1888 : DATA, code
+1888 - 1980 : DATA, data
+1980 - 1988 : BSS, bss
+1988 - 9000 : HEAP, heap
+9000 - 9fcd : STACK, stack
 00f7 - 00f7 : ZEROPAGE, zeropage
 0801 - 0863 : DATA, startup
 9ff9 - a000 : SSTACK, sstack
@@ -32,6 +32,7 @@ sections
 9ff9 - 9ff9 : SSTACK, BearGame::getGameState@stack
 9ff9 - 9ff9 : SSTACK, gotoxy@stack
 9ff9 - 9ff9 : SSTACK, opp::ostream::bput@stack
+9ff9 - 9ff9 : SSTACK, opp::ostringstream::bput@stack
 9ff9 - 9ff9 : SSTACK, putchar@stack
 9ff9 - 9ff9 : SSTACK, opp::costream::bput@stack
 9ff9 - 9ff9 : SSTACK, opp::ostream::bput$vcall@stack
@@ -54,12 +55,13 @@ sections
 9ff9 - 9ff9 : SSTACK, joy_poll@stack
 9ff9 - 9ff9 : SSTACK, JoyDirection::setJoyDirection@stack
 9ff9 - 9ff9 : SSTACK, BearGame::getUserInput@stack
-9ff9 - 9ff9 : SSTACK, BearSprite::getX@stack
-9ff9 - 9ff9 : SSTACK, BearSprite::getY@stack
+9ff9 - 9ff9 : SSTACK, BearSprite::getPos@stack
 9ff9 - 9ff9 : SSTACK, JoyDirection::getJoyDirectionX@stack
 9ff9 - 9ff9 : SSTACK, JoyDirection::getJoyDirectionY@stack
 9ff9 - 9ff9 : SSTACK, BearSprite::move@stack
 9ff9 - 9ff9 : SSTACK, BearGame::updateBearSpritePosition@stack
+9ff9 - 9ff9 : SSTACK, BearSprite::getX@stack
+9ff9 - 9ff9 : SSTACK, BearSprite::getY@stack
 9ff9 - 9ff9 : SSTACK, ScoreType::getIsAchievement@stack
 9ff9 - 9ff9 : SSTACK, ScoreType::getIsAchieved@stack
 9ff9 - 9ff9 : SSTACK, ScoreType::setIsAchieved@stack
@@ -70,175 +72,183 @@ sections
 9ff9 - 9ff9 : SSTACK, BearGame::updateGame@stack
 9ff9 - 9ff9 : SSTACK, BearSprite::render@stack
 9ff9 - 9ff9 : SSTACK, BearGame::renderGame@stack
-9ff9 - 9ff9 : SSTACK, BearGame::play@stack
 9ff9 - 9ff9 : SSTACK, BearGame::gameOver@stack
 9ff9 - 9ff9 : SSTACK, BearGame::gameWon@stack
+9ff9 - 9ff9 : SSTACK, BearGame::play@stack
 9ff9 - 9ff9 : SSTACK, BearGame::~BearGame@stack
-9fcf - 9fe7 : SSTACK, main@stack
+9fcd - 9fe7 : SSTACK, main@stack
 
 regions
 00f7 - 00ff : 0000, 0000, zeropage
 0801 - 0880 : 0863, 0062, startup
-0880 - 9000 : 17ea, 0f6a, main
+0880 - 9000 : 1980, 1108, main
 
 objects
 00f7 - 00f7 : ZeroStart, START:zeropage
 00f7 - 00f7 : ZeroEnd, END:zeropage
 0801 - 0863 : startup, NATIVE_CODE:startup
 0880 - 0996 : main, NATIVE_CODE:code
-0996 - 0a55 : BearGame::+BearGame, NATIVE_CODE:code
-0a55 - 0b2b : Score::+Score, NATIVE_CODE:code
-0b2b - 0b55 : ScoreType::*ScoreType, NATIVE_CODE:code
-0b55 - 0b83 : ScoreType::+ScoreType, NATIVE_CODE:code
-0b83 - 0bea : opp::string::operator=, NATIVE_CODE:code
-0bea - 0beb : *, DATA:code
-0beb - 0c41 : ScoreType::+ScoreType, NATIVE_CODE:code
-0c41 - 0cb2 : opp::string::operator=, NATIVE_CODE:code
-0cb2 - 0cc0 : opp::string::~string, NATIVE_CODE:code
-0cc0 - 0d15 : opp::string::+string, NATIVE_CODE:code
-0d15 - 0d27 : *, DATA:code
-0d27 - 0d73 : opp::string::+string, NATIVE_CODE:code
-0d73 - 0dae : ScoreType::operator=, NATIVE_CODE:code
-0dae - 0de7 : BearSprite::+BearSprite, NATIVE_CODE:code
-0de7 - 0e3d : cwin_init, NATIVE_CODE:code
-0e3d - 0e41 : clrscr, NATIVE_CODE:code
-0e41 - 0e58 : iocharmap, NATIVE_CODE:code
-0e58 - 0e60 : putch, NATIVE_CODE:code
-0e60 - 0e65 : BearGame::getGameState, NATIVE_CODE:code
-0e65 - 0e6e : gotoxy, NATIVE_CODE:code
-0e6e - 0e94 : opp::ostream::operator<<, NATIVE_CODE:code
-0e94 - 0ea6 : opp::ostream::bput$vcall, NATIVE_CODE:code
-0ea6 - 0eaa : opp::ostream::bput$vtable, DATA:code
-0eaa - 0eab : opp::ostream::bput, NATIVE_CODE:code
-0eab - 0eb0 : opp::costream::bput, NATIVE_CODE:code
-0eb0 - 0eb8 : putchar, NATIVE_CODE:code
-0eb8 - 0efb : putpch, NATIVE_CODE:code
-0efb - 0f17 : opp::ios::+ios, NATIVE_CODE:code
-0f17 - 0f1d : *, DATA:code
-0f1d - 0f37 : BearGame::setup, NATIVE_CODE:code
-0f37 - 0fca : BearSprite::drawSprite, NATIVE_CODE:code
-0fca - 1066 : spr_set, NATIVE_CODE:code
-1066 - 10b7 : opp::ostream::operator<<, NATIVE_CODE:code
-10b7 - 115b : opp::ostream::numput, NATIVE_CODE:code
-115b - 1208 : opp::ostream::putnum, NATIVE_CODE:code
-1208 - 1210 : *, DATA:code
-1210 - 121c : BearGame::getLevel, NATIVE_CODE:code
-121c - 1225 : *, DATA:code
-1225 - 1231 : Score::getScore, NATIVE_CODE:code
-1231 - 1271 : BearGame::play, NATIVE_CODE:code
-1271 - 129a : BearGame::getUserInput, NATIVE_CODE:code
-129a - 12da : joy_poll, NATIVE_CODE:code
-12da - 138c : BearGame::updateGame, NATIVE_CODE:code
-138c - 142a : BearGame::updateBearSpritePosition, NATIVE_CODE:code
-142a - 1436 : BearSprite::getX, NATIVE_CODE:code
-1436 - 1442 : BearSprite::getY, NATIVE_CODE:code
-1442 - 1447 : JoyDirection::getJoyDirectionY, NATIVE_CODE:code
-1447 - 147f : BearSprite::move, NATIVE_CODE:code
-147f - 14cd : Score::updateScore, NATIVE_CODE:code
-14cd - 14d9 : Score::getScoreTypes, NATIVE_CODE:code
-14d9 - 14e7 : BearGame::renderGame, NATIVE_CODE:code
-14e7 - 150e : BearSprite::render, NATIVE_CODE:code
-150e - 1593 : divmod, NATIVE_CODE:code
-1593 - 1652 : malloc, NATIVE_CODE:code
-1652 - 16eb : free, NATIVE_CODE:code
-16eb - 16ec : spentry, DATA:data
-16ec - 16ed : giocharmap, DATA:data
-16ed - 16f4 : opp::cout, DATA:data
-16f4 - 16f6 : vspriteScreen, DATA:bss
-16f6 - 16f8 : joyy, DATA:bss
-16f8 - 16fa : joyx, DATA:bss
-16fa - 16fc : joyb, DATA:bss
-16fc - 1700 : HeapNode, DATA:bss
-1700 - 1780 : sp_data, DATA:data
-1780 - 17b2 : mul40, DATA:data
-17b2 - 17ea : bitshift, DATA:data
-17ea - 17ea : BSSEnd, END:bss
-17ea - 17ea : BSSStart, START:bss
-17f0 - 17f0 : HeapStart, START:heap
+0996 - 0a5c : BearGame::+BearGame, NATIVE_CODE:code
+0a5c - 0b32 : Score::+Score, NATIVE_CODE:code
+0b32 - 0b5c : ScoreType::*ScoreType, NATIVE_CODE:code
+0b5c - 0b8a : ScoreType::+ScoreType, NATIVE_CODE:code
+0b8a - 0bf1 : opp::string::operator=, NATIVE_CODE:code
+0bf1 - 0bf2 : *, DATA:code
+0bf2 - 0c48 : ScoreType::+ScoreType, NATIVE_CODE:code
+0c48 - 0cb9 : opp::string::operator=, NATIVE_CODE:code
+0cb9 - 0cc7 : opp::string::~string, NATIVE_CODE:code
+0cc7 - 0d1c : opp::string::+string, NATIVE_CODE:code
+0d1c - 0d2e : *, DATA:code
+0d2e - 0d7a : opp::string::+string, NATIVE_CODE:code
+0d7a - 0db5 : ScoreType::operator=, NATIVE_CODE:code
+0db5 - 0dee : BearSprite::+BearSprite, NATIVE_CODE:code
+0dee - 0e44 : cwin_init, NATIVE_CODE:code
+0e44 - 0e48 : clrscr, NATIVE_CODE:code
+0e48 - 0e5f : iocharmap, NATIVE_CODE:code
+0e5f - 0e67 : putch, NATIVE_CODE:code
+0e67 - 0e6c : BearGame::getGameState, NATIVE_CODE:code
+0e6c - 0e75 : gotoxy, NATIVE_CODE:code
+0e75 - 0e9b : opp::ostream::operator<<, NATIVE_CODE:code
+0e9b - 0ead : opp::ostream::bput$vcall, NATIVE_CODE:code
+0ead - 0eb3 : opp::ostream::bput$vtable, DATA:code
+0eb3 - 0eb4 : opp::ostream::bput, NATIVE_CODE:code
+0eb4 - 0f51 : opp::ostringstream::bput, NATIVE_CODE:code
+0f51 - 0f56 : opp::costream::bput, NATIVE_CODE:code
+0f56 - 0f5e : putchar, NATIVE_CODE:code
+0f5e - 0fa1 : putpch, NATIVE_CODE:code
+0fa1 - 0fbd : opp::ios::+ios, NATIVE_CODE:code
+0fbd - 0fc3 : *, DATA:code
+0fc3 - 0fdd : BearGame::setup, NATIVE_CODE:code
+0fdd - 106d : BearSprite::drawSprite, NATIVE_CODE:code
+106d - 1109 : spr_set, NATIVE_CODE:code
+1109 - 115a : opp::ostream::operator<<, NATIVE_CODE:code
+115a - 11fe : opp::ostream::numput, NATIVE_CODE:code
+11fe - 12ab : opp::ostream::putnum, NATIVE_CODE:code
+12ab - 12b3 : *, DATA:code
+12b3 - 12bf : BearGame::getLevel, NATIVE_CODE:code
+12bf - 12c8 : *, DATA:code
+12c8 - 12d4 : Score::getScore, NATIVE_CODE:code
+12d4 - 1348 : BearGame::play, NATIVE_CODE:code
+1348 - 1371 : BearGame::getUserInput, NATIVE_CODE:code
+1371 - 13b1 : joy_poll, NATIVE_CODE:code
+13b1 - 1463 : BearGame::updateGame, NATIVE_CODE:code
+1463 - 1553 : BearGame::updateBearSpritePosition, NATIVE_CODE:code
+1553 - 157f : BearSprite::getPos, NATIVE_CODE:code
+157f - 1584 : JoyDirection::getJoyDirectionX, NATIVE_CODE:code
+1584 - 15b9 : BearSprite::move, NATIVE_CODE:code
+15b9 - 15c5 : BearSprite::getX, NATIVE_CODE:code
+15c5 - 15d1 : BearSprite::getY, NATIVE_CODE:code
+15d1 - 161f : Score::updateScore, NATIVE_CODE:code
+161f - 162b : Score::getScoreTypes, NATIVE_CODE:code
+162b - 1639 : BearGame::renderGame, NATIVE_CODE:code
+1639 - 1660 : BearSprite::render, NATIVE_CODE:code
+1660 - 16e5 : divmod, NATIVE_CODE:code
+16e5 - 1703 : sint16_to_float, NATIVE_CODE:code
+1703 - 1730 : uint16_to_float, NATIVE_CODE:code
+1730 - 17ef : malloc, NATIVE_CODE:code
+17ef - 1888 : free, NATIVE_CODE:code
+1888 - 1889 : spentry, DATA:data
+1889 - 18bb : mul40, DATA:data
+18bb - 18bc : giocharmap, DATA:data
+18bc - 18c3 : opp::cout, DATA:data
+18c3 - 18fb : bitshift, DATA:data
+18fb - 18fd : vspriteScreen, DATA:bss
+18fd - 18ff : joyy, DATA:bss
+1900 - 1980 : sp_data, DATA:data
+1980 - 1982 : joyx, DATA:bss
+1980 - 1980 : BSSStart, START:bss
+1982 - 1984 : joyb, DATA:bss
+1984 - 1988 : HeapNode, DATA:bss
+1988 - 1988 : HeapStart, START:heap
+1988 - 1988 : BSSEnd, END:bss
 9000 - 9000 : HeapEnd, END:heap
-9fcf - 9fd3 : main@stack, BSS:main@stack
-9fcf - 9fcf : StackEnd, END:stack
-9fd3 - 9fe7 : bearGame, BSS:main@stack
+9fcd - 9fd1 : main@stack, BSS:main@stack
+9fcd - 9fcd : StackEnd, END:stack
+9fd1 - 9fe7 : bearGame, BSS:main@stack
 9fe7 - 9fe9 : *, BSS:BearGame::+BearGame@stack
 9fe9 - 9fed : *, BSS:BearGame::+BearGame@stack
 9fed - 9fef : *, BSS:Score::+Score@stack
-9fef - 9ff9 : achieve, BSS:Score::+Score@stack
 9fef - 9ff9 : buffer, BSS:opp::ostream::numput@stack
+9fef - 9ff9 : achieve, BSS:Score::+Score@stack
 9ff9 - a000 : sstack, STACK:sstack
 
 objects by size
 0880 (0116) : main, NATIVE_CODE:code
-0a55 (00d6) : Score::+Score, NATIVE_CODE:code
-0996 (00bf) : BearGame::+BearGame, NATIVE_CODE:code
-1593 (00bf) : malloc, NATIVE_CODE:code
-12da (00b2) : BearGame::updateGame, NATIVE_CODE:code
-115b (00ad) : opp::ostream::putnum, NATIVE_CODE:code
-10b7 (00a4) : opp::ostream::numput, NATIVE_CODE:code
-138c (009e) : BearGame::updateBearSpritePosition, NATIVE_CODE:code
-0fca (009c) : spr_set, NATIVE_CODE:code
-1652 (0099) : free, NATIVE_CODE:code
-0f37 (0093) : BearSprite::drawSprite, NATIVE_CODE:code
-150e (0085) : divmod, NATIVE_CODE:code
-1700 (0080) : sp_data, DATA:data
-0c41 (0071) : opp::string::operator=, NATIVE_CODE:code
-0b83 (0067) : opp::string::operator=, NATIVE_CODE:code
+1463 (00f0) : BearGame::updateBearSpritePosition, NATIVE_CODE:code
+0a5c (00d6) : Score::+Score, NATIVE_CODE:code
+0996 (00c6) : BearGame::+BearGame, NATIVE_CODE:code
+1730 (00bf) : malloc, NATIVE_CODE:code
+13b1 (00b2) : BearGame::updateGame, NATIVE_CODE:code
+11fe (00ad) : opp::ostream::putnum, NATIVE_CODE:code
+115a (00a4) : opp::ostream::numput, NATIVE_CODE:code
+0eb4 (009d) : opp::ostringstream::bput, NATIVE_CODE:code
+106d (009c) : spr_set, NATIVE_CODE:code
+17ef (0099) : free, NATIVE_CODE:code
+0fdd (0090) : BearSprite::drawSprite, NATIVE_CODE:code
+1660 (0085) : divmod, NATIVE_CODE:code
+1900 (0080) : sp_data, DATA:data
+12d4 (0074) : BearGame::play, NATIVE_CODE:code
+0c48 (0071) : opp::string::operator=, NATIVE_CODE:code
+0b8a (0067) : opp::string::operator=, NATIVE_CODE:code
 0801 (0062) : startup, NATIVE_CODE:startup
-0beb (0056) : ScoreType::+ScoreType, NATIVE_CODE:code
-0de7 (0056) : cwin_init, NATIVE_CODE:code
-0cc0 (0055) : opp::string::+string, NATIVE_CODE:code
-1066 (0051) : opp::ostream::operator<<, NATIVE_CODE:code
-147f (004e) : Score::updateScore, NATIVE_CODE:code
-0d27 (004c) : opp::string::+string, NATIVE_CODE:code
-0eb8 (0043) : putpch, NATIVE_CODE:code
-1231 (0040) : BearGame::play, NATIVE_CODE:code
-129a (0040) : joy_poll, NATIVE_CODE:code
-0d73 (003b) : ScoreType::operator=, NATIVE_CODE:code
-0dae (0039) : BearSprite::+BearSprite, NATIVE_CODE:code
-1447 (0038) : BearSprite::move, NATIVE_CODE:code
-17b2 (0038) : bitshift, DATA:data
-1780 (0032) : mul40, DATA:data
-0b55 (002e) : ScoreType::+ScoreType, NATIVE_CODE:code
-0b2b (002a) : ScoreType::*ScoreType, NATIVE_CODE:code
-1271 (0029) : BearGame::getUserInput, NATIVE_CODE:code
-14e7 (0027) : BearSprite::render, NATIVE_CODE:code
-0e6e (0026) : opp::ostream::operator<<, NATIVE_CODE:code
-0efb (001c) : opp::ios::+ios, NATIVE_CODE:code
-0f1d (001a) : BearGame::setup, NATIVE_CODE:code
-0e41 (0017) : iocharmap, NATIVE_CODE:code
-9fd3 (0014) : bearGame, BSS:main@stack
-0e94 (0012) : opp::ostream::bput$vcall, NATIVE_CODE:code
-0cb2 (000e) : opp::string::~string, NATIVE_CODE:code
-14d9 (000e) : BearGame::renderGame, NATIVE_CODE:code
-1210 (000c) : BearGame::getLevel, NATIVE_CODE:code
-1225 (000c) : Score::getScore, NATIVE_CODE:code
-142a (000c) : BearSprite::getX, NATIVE_CODE:code
-1436 (000c) : BearSprite::getY, NATIVE_CODE:code
-14cd (000c) : Score::getScoreTypes, NATIVE_CODE:code
-9fef (000a) : achieve, BSS:Score::+Score@stack
+0bf2 (0056) : ScoreType::+ScoreType, NATIVE_CODE:code
+0dee (0056) : cwin_init, NATIVE_CODE:code
+0cc7 (0055) : opp::string::+string, NATIVE_CODE:code
+1109 (0051) : opp::ostream::operator<<, NATIVE_CODE:code
+15d1 (004e) : Score::updateScore, NATIVE_CODE:code
+0d2e (004c) : opp::string::+string, NATIVE_CODE:code
+0f5e (0043) : putpch, NATIVE_CODE:code
+1371 (0040) : joy_poll, NATIVE_CODE:code
+0d7a (003b) : ScoreType::operator=, NATIVE_CODE:code
+0db5 (0039) : BearSprite::+BearSprite, NATIVE_CODE:code
+18c3 (0038) : bitshift, DATA:data
+1584 (0035) : BearSprite::move, NATIVE_CODE:code
+1889 (0032) : mul40, DATA:data
+0b5c (002e) : ScoreType::+ScoreType, NATIVE_CODE:code
+1703 (002d) : uint16_to_float, NATIVE_CODE:code
+1553 (002c) : BearSprite::getPos, NATIVE_CODE:code
+0b32 (002a) : ScoreType::*ScoreType, NATIVE_CODE:code
+1348 (0029) : BearGame::getUserInput, NATIVE_CODE:code
+1639 (0027) : BearSprite::render, NATIVE_CODE:code
+0e75 (0026) : opp::ostream::operator<<, NATIVE_CODE:code
+16e5 (001e) : sint16_to_float, NATIVE_CODE:code
+0fa1 (001c) : opp::ios::+ios, NATIVE_CODE:code
+0fc3 (001a) : BearGame::setup, NATIVE_CODE:code
+0e48 (0017) : iocharmap, NATIVE_CODE:code
+9fd1 (0016) : bearGame, BSS:main@stack
+0e9b (0012) : opp::ostream::bput$vcall, NATIVE_CODE:code
+0cb9 (000e) : opp::string::~string, NATIVE_CODE:code
+162b (000e) : BearGame::renderGame, NATIVE_CODE:code
+12b3 (000c) : BearGame::getLevel, NATIVE_CODE:code
+12c8 (000c) : Score::getScore, NATIVE_CODE:code
+15b9 (000c) : BearSprite::getX, NATIVE_CODE:code
+15c5 (000c) : BearSprite::getY, NATIVE_CODE:code
+161f (000c) : Score::getScoreTypes, NATIVE_CODE:code
 9fef (000a) : buffer, BSS:opp::ostream::numput@stack
-0e65 (0009) : gotoxy, NATIVE_CODE:code
-0e58 (0008) : putch, NATIVE_CODE:code
-0eb0 (0008) : putchar, NATIVE_CODE:code
-16ed (0007) : opp::cout, DATA:data
+9fef (000a) : achieve, BSS:Score::+Score@stack
+0e6c (0009) : gotoxy, NATIVE_CODE:code
+0e5f (0008) : putch, NATIVE_CODE:code
+0f56 (0008) : putchar, NATIVE_CODE:code
+18bc (0007) : opp::cout, DATA:data
 9ff9 (0007) : sstack, STACK:sstack
-0e60 (0005) : BearGame::getGameState, NATIVE_CODE:code
-0eab (0005) : opp::costream::bput, NATIVE_CODE:code
-1442 (0005) : JoyDirection::getJoyDirectionY, NATIVE_CODE:code
-0e3d (0004) : clrscr, NATIVE_CODE:code
-0ea6 (0004) : opp::ostream::bput$vtable, DATA:code
-16fc (0004) : HeapNode, DATA:bss
-9fcf (0004) : main@stack, BSS:main@stack
-16f4 (0002) : vspriteScreen, DATA:bss
-16f6 (0002) : joyy, DATA:bss
-16f8 (0002) : joyx, DATA:bss
-16fa (0002) : joyb, DATA:bss
-0eaa (0001) : opp::ostream::bput, NATIVE_CODE:code
-16eb (0001) : spentry, DATA:data
-16ec (0001) : giocharmap, DATA:data
+0ead (0006) : opp::ostream::bput$vtable, DATA:code
+0e67 (0005) : BearGame::getGameState, NATIVE_CODE:code
+0f51 (0005) : opp::costream::bput, NATIVE_CODE:code
+157f (0005) : JoyDirection::getJoyDirectionX, NATIVE_CODE:code
+0e44 (0004) : clrscr, NATIVE_CODE:code
+1984 (0004) : HeapNode, DATA:bss
+9fcd (0004) : main@stack, BSS:main@stack
+18fb (0002) : vspriteScreen, DATA:bss
+18fd (0002) : joyy, DATA:bss
+1980 (0002) : joyx, DATA:bss
+1982 (0002) : joyb, DATA:bss
+0eb3 (0001) : opp::ostream::bput, NATIVE_CODE:code
+1888 (0001) : spentry, DATA:data
+18bb (0001) : giocharmap, DATA:data
 00f7 (0000) : ZeroStart, START:zeropage
 00f7 (0000) : ZeroEnd, END:zeropage
-17ea (0000) : BSSEnd, END:bss
-17ea (0000) : BSSStart, START:bss
-17f0 (0000) : HeapStart, START:heap
+1980 (0000) : BSSStart, START:bss
+1988 (0000) : HeapStart, START:heap
+1988 (0000) : BSSEnd, END:bss
 9000 (0000) : HeapEnd, END:heap
-9fcf (0000) : StackEnd, END:stack
+9fcd (0000) : StackEnd, END:stack

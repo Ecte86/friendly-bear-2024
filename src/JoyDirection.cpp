@@ -36,5 +36,5 @@ void JoyDirection::setJoyDirectionY(JoyDirectionY joyY) {
 }
 
 JoyDirection::~JoyDirection() {
-
+    // Destructor, nothing to do here
 }

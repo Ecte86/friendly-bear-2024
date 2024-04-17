@@ -11,8 +11,14 @@
 
 #include "Scores.hpp"
 
+enum class JoyStickPort {
+  PORT_2 = 0,
+  PORT_1 = 1
+};
+
 class BearGame {
   private:
+    byte frameClock;
     GameState gameState;
     PlayState playState;
     BearSprite *bearSprite;
@@ -36,6 +42,8 @@ class BearGame {
 
     void getUserInput();
 
+    int getFrameClock();
+    
     void updateBearSpritePosition();
 
     void updateGame();
@@ -45,6 +53,8 @@ class BearGame {
     int getLevel();
 
     int getScore();
+
+    BearSprite *getBearSprite();
 
     ~BearGame();
 };

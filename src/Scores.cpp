@@ -11,6 +11,8 @@ void Score::updateScore(ScoreType scoreType) {
     if (scoreType.getIsAchievement()) {
         if (!scoreType.getIsAchieved()) {
             scoreType.setIsAchieved(true);
+        } else {
+            return;
         }
     }
     this->totalScore += scoreType.getAmount();
