@@ -9,13 +9,13 @@ Score::Score() {
 
 void Score::updateScore(ScoreType scoreType) {
     if (scoreType.getIsAchievement()) {
-        if (!scoreType.getIsAchieved()) {
+        if (scoreType.getIsAchieved() == false){
             scoreType.setIsAchieved(true);
+            this->totalScore += scoreType.getAmount();
         } else {
             return;
         }
     }
-    this->totalScore += scoreType.getAmount();
 }
 
 ScoreType *Score::getScoreTypes() {

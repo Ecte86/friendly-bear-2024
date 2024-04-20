@@ -68,22 +68,3 @@ int main(void) {
     }
     return 0;
 }
-
-// TODO: Move to utils file
-void coutAt(int x, int y, string str) {
-    int oldX = wherex();
-    int oldY = wherey();
-    gotoxy(x, y);
-    bool done = false;
-    int idx = 0;
-    while (done != true) {
-        // clear the line
-        putch(' ');
-        if (wherex() == 40 || idx == str.size()) {
-            done = true;
-        }
-    };
-    gotoxy(x, y);
-    cout << str << endl;
-    gotoxy(oldX, oldY);
-}

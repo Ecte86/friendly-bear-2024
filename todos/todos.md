@@ -1,0 +1,2 @@
+- TODO: fix scoring boundaries (borders are ok!!)
+- TODO: ensure any scoring from "achievements" happens ONCE
