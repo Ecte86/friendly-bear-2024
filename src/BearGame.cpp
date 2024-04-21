@@ -175,7 +175,8 @@ void BearGame::updateGame() {
 
     // Update the score
     if (this->frameClock % 60 == 0) {
-        this->score.updateScore(this->score.getScoreTypes()[0]);
+        // TODO: This still doesn't work - need to fix. Turned off for now 
+        //this->score.updateScore(this->score.getScoreTypes()[0]);
     }
     // Check for game over or game won conditions
     // TODO: Need to implement game over and game won conditions

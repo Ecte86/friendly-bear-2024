@@ -1,33 +1,33 @@
 #include "../include/ScoreType.hpp"
 
 ScoreType::ScoreType() {
-    this->isAchievement = false;
-    this->isAchieved = false;
+    this->achievement = false;
+    this->achieved = false;
     this->amount = 0;
     this->name = "";
 }
 
 ScoreType::ScoreType(bool isAchievement, bool isAchieved, int amount, string name) {
-    this->isAchievement = isAchievement;
-    this->isAchieved = isAchieved;
+    this->setIsAchievement(isAchievement);
+    this->setIsAchieved(isAchieved);
     this->amount = amount;
     this->name = name;
 }
 
-bool ScoreType::getIsAchievement() {
-    return this->isAchievement;
+bool ScoreType::isAchievement() {
+    return this->achievement;
 }
 
 void ScoreType::setIsAchievement(bool isAchievement) {
-    this->isAchievement = isAchievement;
+    this->achievement = isAchievement;
 }
 
-bool ScoreType::getIsAchieved() {
-    return this->isAchieved;
+bool ScoreType::isAchieved() {
+    return this->achieved;
 }
 
 void ScoreType::setIsAchieved(bool isAchieved) {
-    this->isAchieved = isAchieved;
+    this->achieved = isAchieved;
 }
 
 int ScoreType::getAmount() {

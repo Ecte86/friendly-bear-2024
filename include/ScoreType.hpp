@@ -9,18 +9,18 @@ using namespace opp;
 
 class ScoreType {
 private:
-    bool isAchievement; // if true, can be achieved only once
-    bool isAchieved;
+    bool achievement; // if true, can be achieved only once
+    bool achieved;
     int amount;
     string name;
 public:
     ScoreType();
     ScoreType(bool isAchievement, bool isAchieved, int amount, string name);
 
-    bool getIsAchievement();
+    bool isAchievement();
     void setIsAchievement(bool isAchievement);
 
-    bool getIsAchieved();
+    bool isAchieved();
     void setIsAchieved(bool isAchieved);
 
     int getAmount();

@@ -8,13 +8,21 @@ Score::Score() {
 }
 
 void Score::updateScore(ScoreType scoreType) {
-    if (scoreType.getIsAchievement()) {
-        if (scoreType.getIsAchieved() == false){
-            scoreType.setIsAchieved(true);
-            this->totalScore += scoreType.getAmount();
+    // If the score type is an achievement, check if it has been achieved
+    // If it has, return
+    // If it hasn't, add the score to the total score,
+    // set the score type to achieved, and return
+    if (scoreType.isAchievement()) {
+        if (scoreType.isAchieved()) {
+            return;
         } else {
+            this->totalScore += scoreType.getAmount();
+            scoreType.setIsAchieved(true);
             return;
         }
+    } else {
+        // If the score type is not an achievement, add the score to the total score
+        this->totalScore += scoreType.getAmount();
     }
 }
 

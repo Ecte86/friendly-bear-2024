@@ -4,20 +4,20 @@ $00 R0(P), $00 R1(C), $01 R2(B), $10 R3(P), $02 R4(I),
 L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/iostream.h
 0000 ( 211)		CONST	R0(P)	<-	CG7(24:0 'opp::cout')	{S}
 0001 ( 183)		STOREZ2		<-	V(0 '')+0 , R0(PF)	{}
-0002 ( 186)		CALLN		<-	V(32 'opp::ios::+ios')+0 	{}
+0002 ( 186)		CALLN		<-	V(34 'opp::ios::+ios')+0 	{}
 0003 ( 155)		STOREG1		<-	V(24 'opp::cout' A)+0 , CC:3	{}
-0004 (  27)		CONST	R0(P)	<-	CG15(55:0 'bearGame')	{S}
+0004 (  27)		CONST	R0(P)	<-	CG15(53:0 'bearGame')	{S}
 0005 (  27)		STOREG2		<-	V(-1 'sstack')+0 , R0(PF)	{}
 0006 (  27)		CALLN		<-	V(1 'BearGame::+BearGame')+0 	{}
-0007 (  28)		CALLN		<-	V(20 'clrscr')+0 	{}
+0007 (  28)		CALLN		<-	V(22 'clrscr')+0 	{}
 0008 (  29)		STOREZ1		<-	V(1 '')+0 , CC:3	{}
-0009 (  29)		CALLN		<-	V(21 'iocharmap')+0 	{}
+0009 (  29)		CALLN		<-	V(23 'iocharmap')+0 	{}
 000a (  35)		JUMP		<-		{}
 		==> 3
 L3: <= D-1: (5) Head P58 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/main.cpp
-0000 (  35)		CONST	R0(P)	<-	CG15(55:0 'bearGame')	{IS}
+0000 (  35)		CONST	R0(P)	<-	CG15(53:0 'bearGame')	{IS}
 0001 (  35)		STOREZ2		<-	V(0 '')+0 , R0(P)	{}
-0002 (  35)		CALLN	R1(C)	<-	V(23 'BearGame::getGameState')+0 	{E}
+0002 (  35)		CALLN	R1(C)	<-	V(25 'BearGame::getGameState')+0 	{E}
 0003 (  35)		RELOP19	R2(B)	<-	R1(C), CC:2	{}
 0004 (  35)		BRANCH		<-	R2(BF)	{}
 		==> 12
@@ -40,45 +40,45 @@ L17: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendl
 		==> 6
 		==> 9
 L6: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/main.cpp
-0000 (  37)		CALLN		<-	V(24 'gotoxy')+0 	{}
+0000 (  37)		CALLN		<-	V(26 'gotoxy')+0 	{}
 0001 (  38)		STOREZ2		<-	V(4 '')+0 , R3(PF)	{}
 0002 (  38)		CONST	R3(P)	<-	CG0(26:0 '')	{S}
 0003 (  38)		STOREZ2		<-	V(6 '')+0 , R3(PF)	{}
-0004 (  38)		CALLN	R3(P)	<-	V(25 'opp::ostream::operator<<')+0 	{}
+0004 (  38)		CALLN	R3(P)	<-	V(27 'opp::ostream::operator<<')+0 	{}
 0005 ( 192)		STOREZ2		<-	V(1 '')+0 , R3(PF)	{}
 0006 ( 192)		STOREZ1		<-	V(3 '')+0 , CC:10	{}
-0007 ( 192)		CALLN		<-	V(26 'opp::ostream::bput$vcall')+0 	{E}
+0007 ( 192)		CALLN		<-	V(28 'opp::ostream::bput$vcall')+0 	{E}
 0008 (  39)		STOREG2		<-	V(-1 'sstack')+2 , R0(PF)	{}
-0009 (  39)		CALLN		<-	V(35 'BearGame::setup')+0 	{}
-000a ( 201)		STOREG1		<-	V(55 'bearGame' A)+1 , CC:1	{}
+0009 (  39)		CALLN		<-	V(37 'BearGame::setup')+0 	{}
+000a ( 201)		STOREG1		<-	V(53 'bearGame' A)+1 , CC:1	{}
 000b (  34)		JUMP		<-		{}
 		==> 3
 L9: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/main.cpp
-0000 (  46)		CALLN		<-	V(24 'gotoxy')+0 	{}
+0000 (  46)		CALLN		<-	V(26 'gotoxy')+0 	{}
 0001 (  47)		STOREZ2		<-	V(4 '')+0 , R3(PF)	{}
 0002 (  47)		CONST	R3(P)	<-	CG0(32:0 '')	{S}
 0003 (  47)		STOREZ2		<-	V(6 '')+0 , R3(PF)	{}
-0004 (  47)		CALLN	R3(P)	<-	V(25 'opp::ostream::operator<<')+0 	{}
+0004 (  47)		CALLN	R3(P)	<-	V(27 'opp::ostream::operator<<')+0 	{}
 0005 (  47)		STOREZ2		<-	V(0 '')+0 , R0(P)	{}
-0006 (  47)		CALLN	R4(I)	<-	V(43 'BearGame::getLevel')+0 	{E}
+0006 (  47)		CALLN	R4(I)	<-	V(45 'BearGame::getLevel')+0 	{E}
 0007 (  48)		STOREG2		<-	V(-1 'sstack')+3 , R3(PF)	{}
 0008 (  47)		STOREG2		<-	V(-1 'sstack')+5 , R4(IF)	{}
-0009 (  48)		CALLN	R3(P)	<-	V(40 'opp::ostream::operator<<')+0 	{}
+0009 (  48)		CALLN	R3(P)	<-	V(42 'opp::ostream::operator<<')+0 	{}
 000a (  48)		STOREZ2		<-	V(4 '')+0 , R3(PF)	{}
 000b (  48)		CONST	R3(P)	<-	CG0(33:0 '')	{S}
 000c (  48)		STOREZ2		<-	V(6 '')+0 , R3(PF)	{}
-000d (  48)		CALLN	R3(P)	<-	V(25 'opp::ostream::operator<<')+0 	{}
-000e (  39)		CONST	R4(P)	<-	CG15(55:7 'bearGame')	{S}
+000d (  48)		CALLN	R3(P)	<-	V(27 'opp::ostream::operator<<')+0 	{}
+000e (  39)		CONST	R4(P)	<-	CG15(53:7 'bearGame')	{S}
 000f (  39)		STOREZ2		<-	V(0 '')+0 , R4(PF)	{}
-0010 (  39)		CALLN	R4(I)	<-	V(45 'Score::getScore')+0 	{E}
+0010 (  39)		CALLN	R4(I)	<-	V(47 'Score::getScore')+0 	{E}
 0011 (  48)		STOREG2		<-	V(-1 'sstack')+3 , R3(PF)	{}
 0012 (  48)		STOREG2		<-	V(-1 'sstack')+5 , R4(IF)	{}
-0013 (  48)		CALLN	R3(P)	<-	V(40 'opp::ostream::operator<<')+0 	{}
+0013 (  48)		CALLN	R3(P)	<-	V(42 'opp::ostream::operator<<')+0 	{}
 0014 ( 192)		STOREZ2		<-	V(1 '')+0 , R3(PF)	{}
 0015 ( 192)		STOREZ1		<-	V(3 '')+0 , CC:10	{}
-0016 ( 192)		CALLN		<-	V(26 'opp::ostream::bput$vcall')+0 	{E}
+0016 ( 192)		CALLN		<-	V(28 'opp::ostream::bput$vcall')+0 	{E}
 0017 (  59)		STOREZ2		<-	V(10 '')+0 , R0(PF)	{}
-0018 (  59)		CALLN		<-	V(46 'BearGame::play')+0 	{}
+0018 (  59)		CALLN		<-	V(48 'BearGame::play')+0 	{}
 0019 (  34)		JUMP		<-		{}
 		==> 3
 L16: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/main.cpp
@@ -123,14 +123,14 @@ L3: <= D-1: (2)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 000c (  21)		STOREZ2		<-	V(0 '')+0 , R2(PF){R2}	{}
 000d (  22)		CONST	R0(P)	<-	CA0(-1:1024 '')	{S}
 000e (  22)		STOREZ2		<-	V(2 '')+0 , R0(PF)	{}
-000f (  21)		CALLN		<-	V(17 'cwin_init')+0 	{}
+000f (  21)		CALLN		<-	V(19 'cwin_init')+0 	{}
 0010 (  11)		STOREZ2		<-	V(0 '')+0 , R1(PF)	{}
 0011 (  16)		CONST	R0(P)	<-	CG2(21:0 '')	{S}
 0012 (  16)		STOREZ2		<-	V(0 '')+0 , R0(PF)	{}
 0013 (  30)		RET		<-		{}
 L2: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
 0000 (  12)		STOREZ2		<-	V(0 '')+0 , R2(P){R1}	{}
-0001 (  12)		CALLN		<-	V(15 'BearSprite::+BearSprite')+0 	{}
+0001 (  12)		CALLN		<-	V(17 'BearSprite::+BearSprite')+0 	{}
 0002 (  12)		JUMP		<-		{}
 		==> 3
 --------------------------------------------------------------------
@@ -155,21 +155,21 @@ L3: <= D-1: (2)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 0007 (   6)		STOREZ2		<-	V(0 '')+0 , R3(P)	{}
 0008 (   6)		CONST	R4(P)	<-	CG0(12:0 '')	{S}
 0009 (   6)		STOREZ2		<-	V(2 '')+0 , R4(PF)	{}
-000a (   6)		CALLN		<-	V(10 'opp::string::+string')+0 	{}
+000a (   6)		CALLN		<-	V(12 'opp::string::+string')+0 	{}
 000b (   6)		STOREZ2		<-	V(2 '')+0 , R3(P)+0 {V(16 '' A)} 	{}
 000c (   6)		CONST	R4(P)	<-	CF2(6:0 '')	{S}
 000d (   6)		STOREZ2		<-	V(0 '')+0 , R4(PF)+0 {V(6 '')} 	{}
-000e (   6)		CALLN		<-	V(11 'opp::string::+string')+0 	{}
+000e (   6)		CALLN		<-	V(13 'opp::string::+string')+0 	{}
 000f (   6)		CALLN		<-	V(7 'ScoreType::+ScoreType')+0 	{}
 0010 (   7)		STOREZ2		<-	V(6 '')+0 , R1(PF)	{}
 0011 (   7)		LOADI2	R0(P)	<-	R0(PF)+0	{}
 0012 (   7)		STOREZ2		<-	V(4 '')+0 , R0(PF)	{}
-0013 (   7)		CALLN		<-	V(12 'ScoreType::operator=')+0 	{}
+0013 (   7)		CALLN		<-	V(14 'ScoreType::operator=')+0 	{}
 0014 (  49)		CONST	R0(P)	<-	CG6(15:4 'achieve')	{S}
 0015 (  49)		STOREZ2		<-	V(0 '')+0 , R0(PF)	{}
-0016 (  51)		CALLN		<-	V(9 'opp::string::~string')+0 	{E}
+0016 (  51)		CALLN		<-	V(11 'opp::string::~string')+0 	{E}
 0017 (   6)		STOREZ2		<-	V(0 '')+0 , R3(PF)	{}
-0018 (   6)		CALLN		<-	V(9 'opp::string::~string')+0 	{E}
+0018 (   6)		CALLN		<-	V(11 'opp::string::~string')+0 	{E}
 0019 (   8)		RET		<-		{}
 L2: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/Scores.cpp
 0000 (   5)		STOREZ2		<-	V(6 '')+0 , R1(P){R1}	{}
@@ -303,17 +303,33 @@ L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 0003 (  27)		CONST	R1(P)	<-	CA0(-1:0 '')	{S}
 0004 (  27)		STOREI2		<-	R0(P)+4, R1(PF)	{}
 0005 (  11)		LOADP1	R2(B)	<-	V(2 '')+0 	{S}
-0006 (  11)		STOREI1		<-	R0(P)+0, R2(BF)	{}
+0006 (  22)		STOREI1		<-	R0(P)+0, R2(BF)	{}
 0007 (  12)		LOADP1	R2(B)	<-	V(3 '')+0 	{S}
-0008 (  12)		STOREI1		<-	R0(P)+1, R2(BF)	{}
+0008 (  30)		STOREI1		<-	R0(P)+1, R2(BF)	{}
 0009 (  13)		LOADP2	R1(I)[-32768..65535]	<-	V(4 '')+0 	{S}
 000a (  13)		STOREI2		<-	R0(PF)+2, R1(IF)[-32768..65535]	{}
 000b (  18)		CONST	R0(P)	<-	CP2(6:0 '')	{S}
 000c (  14)		STOREZ2		<-	V(2 '')+0 , R0(P)	{}
-000d (  14)		CALLN		<-	V(8 'opp::string::operator=')+0 	{}
+000d (  14)		CALLN		<-	V(10 'opp::string::operator=')+0 	{}
 000e (  17)		STOREZ2		<-	V(0 '')+0 , R0(PF)	{}
-000f (  17)		CALLN		<-	V(9 'opp::string::~string')+0 	{E}
+000f (  17)		CALLN		<-	V(11 'opp::string::~string')+0 	{E}
 0010 (  17)		RET		<-		{}
+--------------------------------------------------------------------
+ScoreType::setIsAchievement: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/ScoreType.hpp:21
+$00 R0(P), $00 R1(B), 
+L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/ScoreType.cpp
+0000 (  22)		LOADZ2	R0(P)	<-	V(0 '')+0 	{S}
+0001 (  22)		LOADZ1	R1(B)	<-	V(2 '')+0 	{S}
+0002 (  22)		STOREI1		<-	R0(PF)+0, R1(BF)	{}
+0003 (  23)		RET		<-		{}
+--------------------------------------------------------------------
+ScoreType::setIsAchieved: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/ScoreType.hpp:24
+$00 R0(P), $00 R1(B), 
+L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/ScoreType.cpp
+0000 (  30)		LOADZ2	R0(P)	<-	V(0 '')+0 	{S}
+0001 (  30)		LOADZ1	R1(B)	<-	V(2 '')+0 	{S}
+0002 (  30)		STOREI1		<-	R0(PF)+1, R1(BF)	{}
+0003 (  31)		RET		<-		{}
 --------------------------------------------------------------------
 opp::string::operator=: /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/string.h:26
 $00 R0(P), $00 R1(P), $01 R2(P), $03 R3(P), $00 R4(B), $00 R5(I), $00 R6(P), $00 R7(C), 
@@ -496,7 +512,7 @@ L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 0009 (  10)		STOREZ2		<-	V(0 '')+0 , R3(PF)	{}
 000a (  10)		LEAI	R0(P)	<-	R0(PF)+0, CI:4	{S}
 000b (  10)		STOREZ2		<-	V(2 '')+0 , R0(PF)	{}
-000c (  33)		CALLN		<-	V(8 'opp::string::operator=')+0 	{}
+000c (  33)		CALLN		<-	V(10 'opp::string::operator=')+0 	{}
 000d (  33)		RETV		<-	R2(PF)+0	{}
 --------------------------------------------------------------------
 ScoreType::~ScoreType: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/ScoreType.hpp:32
@@ -505,7 +521,7 @@ L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 0000 (  51)		LOADZ2	R0(P)	<-	V(2 '')+0 	{S}
 0001 (  49)		LEAI	R0(P)	<-	R0(PF)+0, CI:4	{S}
 0002 (  49)		STOREZ2		<-	V(0 '')+0 , R0(PF)	{}
-0003 (  51)		CALLN		<-	V(9 'opp::string::~string')+0 	{E}
+0003 (  51)		CALLN		<-	V(11 'opp::string::~string')+0 	{E}
 0004 (  51)		RET		<-		{}
 --------------------------------------------------------------------
 JoyDirection::+JoyDirection: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/JoyDirection.hpp:25
@@ -578,7 +594,7 @@ L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 Score::~Score: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/Scores.hpp:17
 
 L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/Scores.cpp
-0000 (  29)		RET		<-		{}
+0000 (  39)		RET		<-		{}
 --------------------------------------------------------------------
 clrscr: /run/media/ecte/TOSHIBA-External/opt/oscar64/include/conio.h:58
 
@@ -600,7 +616,7 @@ L1: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/conio.
 0001 ( 138)		JUMP		<-		{}
 		==> 8
 L8: <= D-1: (2)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/conio.c
-0000 ( 141)		CALLN		<-	V(22 'putch')+0 	{}
+0000 ( 141)		CALLN		<-	V(24 'putch')+0 	{}
 0001 ( 140)		JUMP		<-		{}
 		==> 3
 L3: <= D-1: (2)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/conio.c
@@ -652,7 +668,7 @@ L1: <= D-1: (2) Head P34 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/op
 L2: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/iostream.cpp
 0000 ( 547)		STOREZ2		<-	V(1 '')+0 , R2(P)	{}
 0001 ( 547)		STOREZ1		<-	V(3 '')+0 , R4(CF)[-128..255]	{}
-0002 ( 547)		CALLN		<-	V(26 'opp::ostream::bput$vcall')+0 	{E}
+0002 ( 547)		CALLN		<-	V(28 'opp::ostream::bput$vcall')+0 	{E}
 0003 ( 547)		BINOP1	R0(C)[1..]	<-	R0(CF)[0..], CI:1	{}
 0004 ( 546)		JUMP		<-		{}
 		==> 1
@@ -746,7 +762,7 @@ $00 R0(C),
 L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/iostream.cpp
 0000 ( 569)		LOADZ1	R0(C)[-128..255]	<-	V(3 '')+0 	{S}
 0001 ( 569)		STOREZ1		<-	V(0 '')+0 , R0(CF)[-128..255]	{}
-0002 ( 569)		CALLN		<-	V(30 'putchar')+0 	{}
+0002 ( 569)		CALLN		<-	V(32 'putchar')+0 	{}
 0003 ( 570)		RET		<-		{}
 --------------------------------------------------------------------
 putchar: /run/media/ecte/TOSHIBA-External/opt/oscar64/include/stdio.h:7
@@ -760,7 +776,7 @@ $00 R0(P),
 L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/iostream.cpp
 0000 ( 565)		LOADZ2	R0(P)	<-	V(2 '')+0 	{S}
 0001 ( 183)		STOREZ2		<-	V(0 '')+0 , R0(P)	{}
-0002 ( 186)		CALLN		<-	V(32 'opp::ios::+ios')+0 	{}
+0002 ( 186)		CALLN		<-	V(34 'opp::ios::+ios')+0 	{}
 0003 ( 155)		STOREI1		<-	R0(PF)+0, CC:3	{}
 0004 ( 155)		RET		<-		{}
 --------------------------------------------------------------------
@@ -782,7 +798,7 @@ L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/io
 0000 ( 192)		STOREZ1		<-	V(3 '')+0 , CC:10	{}
 0001 ( 131)		LOADP2	R0(P)	<-	V(0 '')+0 	{S}
 0002 ( 192)		STOREZ2		<-	V(1 '')+0 , R0(P)	{}
-0003 ( 192)		CALLN		<-	V(26 'opp::ostream::bput$vcall')+0 	{E}
+0003 ( 192)		CALLN		<-	V(28 'opp::ostream::bput$vcall')+0 	{E}
 0004 ( 132)		RETV		<-	R0(PF)+0	{}
 --------------------------------------------------------------------
 opp::ostream::put: /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/iostream.h:90
@@ -792,7 +808,7 @@ L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/io
 0001 ( 192)		STOREZ2		<-	V(1 '')+0 , R0(P)	{}
 0002 ( 192)		LOADZ1	R1(C)[-128..255]	<-	V(6 '')+0 	{S}
 0003 ( 192)		STOREZ1		<-	V(3 '')+0 , R1(CF)[-128..255]	{}
-0004 ( 192)		CALLN		<-	V(26 'opp::ostream::bput$vcall')+0 	{E}
+0004 ( 192)		CALLN		<-	V(28 'opp::ostream::bput$vcall')+0 	{E}
 0005 ( 193)		RETV		<-	R0(PF)+0	{}
 --------------------------------------------------------------------
 BearGame::setup: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/BearGame.hpp:32
@@ -801,7 +817,7 @@ L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 0000 (  31)		LOADG2	R0(P)	<-	V(-1 'sstack')+2 	{S}
 0001 (  31)		LOADI2	R0(P)	<-	R0(PF)+3	{}
 0002 (  31)		STOREG2		<-	V(-1 'sstack')+0 , R0(PF)	{}
-0003 (  31)		CALLN		<-	V(36 'BearSprite::drawSprite')+0 	{}
+0003 (  31)		CALLN		<-	V(38 'BearSprite::drawSprite')+0 	{}
 0004 (  32)		RET		<-		{}
 --------------------------------------------------------------------
 BearSprite::drawSprite: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/BearSprite.hpp:24
@@ -825,7 +841,7 @@ L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 000f (  18)		LOADI2	R0(P)	<-	R0(PF)+6	{}
 0010 (   9)		LEAI	R0(P)	<-	R0(PF)+0, CI:1016	{S}
 0011 (   9)		STOREG2		<-	V(27 'vspriteScreen')+0 , R0(PF)	{}
-0012 (  26)		CALLN		<-	V(38 'spr_set')+0 	{}
+0012 (  26)		CALLN		<-	V(40 'spr_set')+0 	{}
 0013 (  27)		STOREZ1		<-	V(0 '')+0 , CC:1	{}
 0014 (  27)		STOREZ1		<-	V(1 '')+0 , CB:1	{}
 0015 (  27)		STOREZ2		<-	V(2 '')+0 , CI:160	{}
@@ -835,7 +851,7 @@ L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 0019 (  27)		STOREZ1		<-	V(8 '')+0 , CB:1	{}
 001a (  27)		STOREZ1		<-	V(9 '')+0 , CB:0	{}
 001b (  27)		STOREZ1		<-	V(10 '')+0 , CB:0	{}
-001c (  27)		CALLN		<-	V(38 'spr_set')+0 	{}
+001c (  27)		CALLN		<-	V(40 'spr_set')+0 	{}
 001d (  29)		STOREA1		<-	V(-1 '')+53285 , CC:9	{V}
 001e (  30)		STOREA1		<-	V(-1 '')+53286 , CC:1	{V}
 001f (  32)		RET		<-		{}
@@ -978,7 +994,7 @@ L1: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/io
 0000 ( 334)		STOREG1		<-	V(-1 'sstack')+2 , CC:45	{}
 0001 ( 334)		UNOP11	R1(I)[1..32768]	<-	R1(IF)[-32768..-1]	{S}
 0002 ( 334)		STOREG2		<-	V(-1 'sstack')+0 , R1(IF)[1..32768]	{}
-0003 ( 334)		CALLN		<-	V(41 'opp::ostream::numput')+0 	{}
+0003 ( 334)		CALLN		<-	V(43 'opp::ostream::numput')+0 	{}
 0004 ( 339)		RETV		<-	R0(PF)+0	{}
 L2: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/iostream.cpp
 0000 ( 336)		STOREG2		<-	V(-1 'sstack')+0 , R1(IF)[0..32767]	{}
@@ -989,11 +1005,11 @@ L2: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/io
 		==> 5
 L4: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/iostream.cpp
 0000 ( 336)		STOREG1		<-	V(-1 'sstack')+2 , CC:43	{}
-0001 ( 336)		CALLN		<-	V(41 'opp::ostream::numput')+0 	{}
+0001 ( 336)		CALLN		<-	V(43 'opp::ostream::numput')+0 	{}
 0002 ( 339)		RETV		<-	R0(PF)+0	{}
 L5: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/iostream.cpp
 0000 ( 338)		STOREG1		<-	V(-1 'sstack')+2 , CC:0	{}
-0001 ( 338)		CALLN		<-	V(41 'opp::ostream::numput')+0 	{}
+0001 ( 338)		CALLN		<-	V(43 'opp::ostream::numput')+0 	{}
 0002 ( 339)		RETV		<-	R0(PF)+0	{}
 --------------------------------------------------------------------
 opp::ostream::numput: /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/iostream.h:107
@@ -1071,7 +1087,7 @@ L19: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/i
 L21: <= D-1: (2)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/iostream.cpp
 0000 ( 275)		STOREZ1		<-	V(8 '')+0 , R2(CF)[0..]	{}
 0001 ( 275)		STOREZ1		<-	V(9 '')+0 , R3(CF)[0..]	{}
-0002 ( 275)		CALLN		<-	V(42 'opp::ostream::putnum')+0 	{}
+0002 ( 275)		CALLN		<-	V(44 'opp::ostream::putnum')+0 	{}
 0003 ( 276)		RET		<-		{}
 L16: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/iostream.cpp
 0000 ( 270)		CONV33	R0(I)[0..9]	<-	R3(C)[0..9]	{}
@@ -1151,7 +1167,7 @@ L8: <= D-1: (2) Head P218 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/o
 0005 ( 215)		LEAI	R7(P)	<-	R6(P)+0, R7(IF)[0..255]	{}
 0006 ( 215)		LOADI1	R3(C)[-128..255]	<-	R7(PF)+0	{}
 0007 ( 215)		STOREZ1		<-	V(3 '')+0 , R3(CF)[-128..255]	{}
-0008 ( 215)		CALLN		<-	V(26 'opp::ostream::bput$vcall')+0 	{E}
+0008 ( 215)		CALLN		<-	V(28 'opp::ostream::bput$vcall')+0 	{E}
 0009 ( 214)		RELOP27	R0(B)	<-	R0(CF)[-128..254], R2(C)[-128..255]	{}
 000a ( 214)		BRANCH		<-	R0(BF)	{}
 		==> 8
@@ -1170,7 +1186,7 @@ L14: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/i
 0000 ( 222)		STOREZ2		<-	V(1 '')+0 , R1(P)	{}
 0001 ( 222)		LOADI1	R0(C)[-128..255]	<-	R1(P)+6	{}
 0002 ( 222)		STOREZ1		<-	V(3 '')+0 , R0(CF)[-128..255]	{}
-0003 ( 222)		CALLN		<-	V(26 'opp::ostream::bput$vcall')+0 	{E}
+0003 ( 222)		CALLN		<-	V(28 'opp::ostream::bput$vcall')+0 	{E}
 0004 ( 223)		BINOP1	R4(C)[0..254]	<-	R4(CF)[1..255], CI:-1	{}
 0005 ( 220)		JUMP		<-		{}
 		==> 13
@@ -1193,7 +1209,7 @@ L17: <= D-1: (2) Head P216 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/
 0005 ( 228)		LEAI	R6(P)	<-	R5(P)+0, R6(IF)[0..255]	{}
 0006 ( 228)		LOADI1	R2(C)[-128..255]	<-	R6(PF)+0	{}
 0007 ( 228)		STOREZ1		<-	V(3 '')+0 , R2(CF)[-128..255]	{}
-0008 ( 228)		CALLN		<-	V(26 'opp::ostream::bput$vcall')+0 	{E}
+0008 ( 228)		CALLN		<-	V(28 'opp::ostream::bput$vcall')+0 	{E}
 0009 ( 227)		RELOP27	R0(B)	<-	R0(CF)[-128..254], CC:0	{}
 000a ( 227)		BRANCH		<-	R0(BF)	{}
 		==> 17
@@ -1207,7 +1223,7 @@ L20: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/opp/i
 0000 ( 232)		STOREZ2		<-	V(1 '')+0 , R1(P)	{}
 0001 ( 232)		LOADI1	R0(C)[-128..255]	<-	R1(P)+6	{}
 0002 ( 232)		STOREZ1		<-	V(3 '')+0 , R0(CF)[-128..255]	{}
-0003 ( 232)		CALLN		<-	V(26 'opp::ostream::bput$vcall')+0 	{E}
+0003 ( 232)		CALLN		<-	V(28 'opp::ostream::bput$vcall')+0 	{E}
 0004 ( 233)		BINOP1	R4(C)[0..254]	<-	R4(CF)[1..255], CI:-1	{}
 0005 ( 230)		JUMP		<-		{}
 		==> 19
@@ -1234,15 +1250,15 @@ L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 0000 (  39)		LOADZ2	R0(P)	<-	V(2 '')+0 	{S}
 0001 (  39)		LEAI	R0(P)	<-	R0(PF)+0, CI:7	{S}
 0002 (  39)		STOREZ2		<-	V(0 '')+0 , R0(PF)	{}
-0003 (  39)		CALLN	R0(I)	<-	V(45 'Score::getScore')+0 	{E}
+0003 (  39)		CALLN	R0(I)	<-	V(47 'Score::getScore')+0 	{E}
 0004 (  39)		RETV		<-	R0(IF)	{}
 --------------------------------------------------------------------
 Score::getScore: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/Scores.hpp:16
 $00 R0(P), 
 L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/Scores.cpp
-0000 (  24)		LOADZ2	R0(P)	<-	V(0 '')+0 	{S}
-0001 (  24)		LOADI2	R0(I)[-32768..65535]	<-	R0(PF)+2	{}
-0002 (  24)		RETV		<-	R0(IF)[-32768..65535]	{}
+0000 (  34)		LOADZ2	R0(P)	<-	V(0 '')+0 	{S}
+0001 (  34)		LOADI2	R0(I)[-32768..65535]	<-	R0(PF)+2	{}
+0002 (  34)		RETV		<-	R0(IF)[-32768..65535]	{}
 --------------------------------------------------------------------
 BearGame::play: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/BearGame.hpp:33
 $00 R0(P), $00 R1(C), $01 R2(C), $02 R3(I), $04 R4(I), 
@@ -1270,7 +1286,7 @@ L3: <= D-1: (2)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 		==> 13
 L7: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
 0000 (  65)		STOREZ2		<-	V(2 '')+0 , R0(P)	{}
-0001 (  65)		CALLN		<-	V(65 'BearGame::renderGame')+0 	{}
+0001 (  65)		CALLN		<-	V(58 'BearGame::renderGame')+0 	{}
 0002 (  67)		JUMP		<-		{}
 		==> 22
 L22: <= D-1: (3)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
@@ -1291,7 +1307,7 @@ L15: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendl
 		==> 16
 L5: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
 0000 (  55)		STOREZ2		<-	V(4 '')+0 , R0(P)	{}
-0001 (  55)		CALLN		<-	V(47 'BearGame::getUserInput')+0 	{}
+0001 (  55)		CALLN		<-	V(49 'BearGame::getUserInput')+0 	{}
 0002 (  56)		STOREI1		<-	R0(PF)+2, CC:2	{}
 0003 (  57)		JUMP		<-		{}
 		==> 4
@@ -1301,8 +1317,8 @@ L16: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendl
 		==> 6
 		==> 22
 L6: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
-0000 (  60)		STOREZ2		<-	V(8 '')+0 , R0(P)	{}
-0001 (  60)		CALLN		<-	V(50 'BearGame::updateGame')+0 	{}
+0000 ( 171)		STOREZ2		<-	V(6 '')+0 , R0(P)	{}
+0001 ( 171)		CALLN		<-	V(53 'BearGame::updateBearSpritePosition')+0 	{}
 0002 (  61)		STOREI1		<-	R0(PF)+2, CC:3	{}
 0003 (  62)		JUMP		<-		{}
 		==> 4
@@ -1325,7 +1341,7 @@ BearGame::getUserInput: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/frien
 $00 R0(C), $00 R1(I), $00 R2(C), $00 R3(B), $00 R4(I), $00 R5(P), 
 L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
 0000 (  97)		STOREZ1		<-	V(0 '')+0 , CC:0	{}
-0001 (  97)		CALLN		<-	V(48 'joy_poll')+0 	{}
+0001 (  97)		CALLN		<-	V(50 'joy_poll')+0 	{}
 0002 ( 111)		LOADG1	R0(C)[-128..255]	<-	V(34 'joyy' A)+0 	{}
 0003 ( 111)		CONV36	R1(I)[-128..127]	<-	R0(C)[-128..255]	{}
 0004 (  99)		LOADG1	R2(C)[-128..255]	<-	V(35 'joyx' A)+0 	{}
@@ -1449,60 +1465,12 @@ L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 0005 (  20)		RET		<-		{}
 --------------------------------------------------------------------
 BearGame::updateGame: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/BearGame.hpp:49
-$00 R0(P), $00 R1(P), $00 R2(I), $02 R3(B), 
+$00 R0(P), 
 L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
 0000 ( 171)		LOADZ2	R0(P)	<-	V(8 '')+0 	{S}
-0001 ( 171)		STOREZ2		<-	V(6 '')+0 , R0(P)	{}
-0002 ( 171)		CALLN		<-	V(51 'BearGame::updateBearSpritePosition')+0 	{}
-0003 ( 177)		LOADI2	R1(P)	<-	R0(P)+3	{}
-0004 ( 177)		STOREZ2		<-	V(0 '')+0 , R1(P)	{}
-0005 ( 177)		CALLN	R2(I)	<-	V(56 'BearSprite::getX')+0 	{E}
-0006 ( 177)		RELOP24	R3(B)	<-	R2(IF), CI:0	{}
-0007 ( 177)		BRANCH		<-	R3(BF)	{}
-		==> 1
-		==> 6
-L1: <= D-1: (4)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
-0000 ( 179)		LEAI	R0(P)	<-	R0(PF)+0, CI:7	{S}
-0001 ( 179)		STOREF2		<-	V(0 '')+0 , R0(P)	{}
-0002 ( 179)		STOREZ2		<-	V(0 '')+0 , R0(PF)	{}
-0003 ( 179)		CALLN	R0(P)	<-	V(63 'Score::getScoreTypes')+0 	{E}
-0004 (  33)		LOADI1	R3(B)	<-	R0(P)+0	{}
-0005 (  33)		STOREF1		<-	V(2 '')+0 , R3(BF)	{}
-0006 (  33)		LOADI1	R3(B)	<-	R0(P)+1	{}
-0007 (  33)		STOREF1		<-	V(2 '')+1 , R3(BF)	{}
-0008 (  33)		LOADI2	R1(I)[-32768..65535]	<-	R0(P)+2	{}
-0009 (  33)		STOREF2		<-	V(2 '')+2 , R1(IF)[-32768..65535]	{}
-000a (  10)		CONST	R1(P)	<-	CF6(2:4 '')	{S}
-000b (  10)		STOREZ2		<-	V(0 '')+0 , R1(PF)	{}
-000c (  10)		LEAI	R0(P)	<-	R0(PF)+0, CI:4	{}
-000d (  10)		STOREZ2		<-	V(2 '')+0 , R0(PF)	{}
-000e (  33)		CALLN		<-	V(11 'opp::string::+string')+0 	{}
-000f ( 179)		CALLN		<-	V(58 'Score::updateScore')+0 	{}
-0010 ( 177)		JUMP		<-		{}
-		==> 3
-L3: <= D-1: (2)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
-0000 ( 183)		RET		<-		{}
-L6: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
-0000 ( 177)		STOREZ2		<-	V(0 '')+0 , R1(P)	{}
-0001 ( 177)		CALLN	R2(I)	<-	V(56 'BearSprite::getX')+0 	{E}
-0002 ( 177)		RELOP23	R3(B)	<-	R2(IF), CI:320	{}
-0003 ( 177)		BRANCH		<-	R3(BF)	{}
-		==> 1
-		==> 5
-L5: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
-0000 ( 178)		STOREZ2		<-	V(0 '')+0 , R1(P)	{}
-0001 ( 178)		CALLN	R2(I)	<-	V(57 'BearSprite::getY')+0 	{E}
-0002 ( 178)		RELOP24	R3(B)	<-	R2(IF), CI:0	{}
-0003 ( 178)		BRANCH		<-	R3(BF)	{}
-		==> 1
-		==> 4
-L4: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
-0000 ( 178)		STOREZ2		<-	V(0 '')+0 , R1(PF)	{}
-0001 ( 178)		CALLN	R1(I)	<-	V(57 'BearSprite::getY')+0 	{E}
-0002 ( 178)		RELOP23	R3(B)	<-	R1(IF), CI:200	{}
-0003 ( 178)		BRANCH		<-	R3(BF)	{}
-		==> 1
-		==> 3
+0001 ( 171)		STOREZ2		<-	V(6 '')+0 , R0(PF)	{}
+0002 ( 171)		CALLN		<-	V(53 'BearGame::updateBearSpritePosition')+0 	{}
+0003 ( 183)		RET		<-		{}
 --------------------------------------------------------------------
 BearGame::updateBearSpritePosition: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/BearGame.hpp:47
 $00 R0(P), $02 R1(P), $00 R2(P), $04 R3(I), $00 R4(C), $00 R5(B), $00 R6(F), 
@@ -1510,12 +1478,12 @@ L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 0000 ( 131)		LOADZ2	R0(P)	<-	V(6 '')+0 	{S}
 0001 ( 131)		LOADI2	R1(P)	<-	R0(P)+3	{}
 0002 ( 131)		STOREZ2		<-	V(0 '')+0 , R1(PF)	{}
-0003 ( 131)		CALLN	R1(P)	<-	V(52 'BearSprite::getPos')+0 	{}
+0003 ( 131)		CALLN	R1(P)	<-	V(54 'BearSprite::getPos')+0 	{}
 0004 ( 135)		LEAI	R2(P)	<-	R0(P)+0, CI:11	{S}
 0005 ( 135)		STOREZ2		<-	V(0 '')+0 , R2(P)	{}
 0006 ( 132)		LOADI2	R3(I)[-32768..65535]	<-	R1(P)+0	{}
 0007 ( 133)		LOADI2	R1(I)[-32768..65535]	<-	R1(PF)+2	{}
-0008 ( 135)		CALLN	R4(C)	<-	V(53 'JoyDirection::getJoyDirectionX')+0 	{E}
+0008 ( 135)		CALLN	R4(C)	<-	V(55 'JoyDirection::getJoyDirectionX')+0 	{E}
 0009 ( 150)		STOREZ2		<-	V(0 '')+0 , R2(PF)	{}
 000a ( 135)		RELOP19	R5(B)	<-	R4(C), CC:-1	{}
 000b ( 135)		BRANCH		<-	R5(BF)	{}
@@ -1532,7 +1500,7 @@ L3: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly
 0001 ( 137)		JUMP		<-		{}
 		==> 1
 L1: <= D-1: (5)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
-0000 ( 150)		CALLN	R4(C)	<-	V(54 'JoyDirection::getJoyDirectionY')+0 	{E}
+0000 ( 150)		CALLN	R4(C)	<-	V(56 'JoyDirection::getJoyDirectionY')+0 	{E}
 0001 ( 165)		STOREZ2		<-	V(2 '')+0 , R3(IF)[-32768..65535]	{}
 0002 ( 165)		LOADI2	R0(P)	<-	R0(PF)+3	{}
 0003 ( 165)		STOREZ2		<-	V(0 '')+0 , R0(PF)	{}
@@ -1552,7 +1520,7 @@ L17: <= D-1: (2)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendl
 		==> 15
 L15: <= D-1: (4)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
 0000 ( 165)		STOREZ2		<-	V(4 '')+0 , R1(IF)[-32768..65535]	{}
-0001 ( 165)		CALLN		<-	V(55 'BearSprite::move')+0 	{}
+0001 ( 165)		CALLN		<-	V(57 'BearSprite::move')+0 	{}
 0002 ( 166)		RET		<-		{}
 L27: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
 0000 ( 150)		RELOP19	R4(B)	<-	R4(CF), CC:1	{}
@@ -1637,113 +1605,13 @@ L5: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/opt/oscar64/include/c64/sp
 0001 (  66)		JUMP		<-		{}
 		==> 7
 --------------------------------------------------------------------
-BearSprite::getX: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/BearSprite.hpp:27
-$00 R0(P), 
-L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearSprite.cpp
-0000 (  42)		LOADZ2	R0(P)	<-	V(0 '')+0 	{S}
-0001 (  42)		LOADI2	R0(I)[-32768..65535]	<-	R0(PF)+8	{}
-0002 (  42)		RETV		<-	R0(IF)[-32768..65535]	{}
---------------------------------------------------------------------
-BearSprite::getY: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/BearSprite.hpp:28
-$00 R0(P), 
-L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearSprite.cpp
-0000 (  46)		LOADZ2	R0(P)	<-	V(0 '')+0 	{S}
-0001 (  46)		LOADI2	R0(I)[-32768..65535]	<-	R0(PF)+10	{}
-0002 (  46)		RETV		<-	R0(IF)[-32768..65535]	{}
---------------------------------------------------------------------
-Score::updateScore: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/Scores.hpp:14
-$00 R0(P), $00 R1(B), $00 R2(P), $00 R3(I), 
-L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/Scores.hpp
-0000 (  14)		CONST	R0(P)	<-	CP6(2:0 '')	{S}
-0001 (  11)		STOREZ2		<-	V(0 '')+0 , R0(P)	{}
-0002 (  11)		CALLN	R1(B)	<-	V(59 'ScoreType::getIsAchievement')+0 	{E}
-0003 (  11)		BRANCH		<-	R1(BF)	{}
-		==> 1
-		==> 3
-L1: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/Scores.cpp
-0000 (  12)		STOREZ2		<-	V(0 '')+0 , R0(P)	{}
-0001 (  12)		CALLN	R1(B)	<-	V(60 'ScoreType::getIsAchieved')+0 	{E}
-0002 (  12)		BRANCH		<-	R1(BF)	{}
-		==> 3
-		==> 4
-L3: <= D-1: (3)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/Scores.cpp
-0000 (  16)		STOREZ2		<-	V(0 '')+0 , R0(PF)	{}
-0001 (  16)		CALLN	R0(I)	<-	V(62 'ScoreType::getAmount')+0 	{E}
-0002 (  16)		LOADP2	R2(P)	<-	V(0 '')+0 	{S}
-0003 (  16)		LOADI2	R3(I)[-32768..65535]	<-	R2(P)+2	{}
-0004 (  16)		BINOP1	R0(I)	<-	R3(IF)[-32768..65535], R0(IF)	{}
-0005 (  16)		STOREI2		<-	R2(PF)+2, R0(IF)	{}
-0006 (  49)		CONST	R0(P)	<-	CP6(2:4 '')	{S}
-0007 (  49)		STOREZ2		<-	V(0 '')+0 , R0(PF)	{}
-0008 (  51)		CALLN		<-	V(9 'opp::string::~string')+0 	{E}
-0009 (  19)		RET		<-		{}
-L4: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/Scores.cpp
-0000 (  13)		CONST	R1(B)	<-	CI:1	{S}
-0001 (  30)		STOREP1		<-	V(2 '')+1 , R1(BF)	{}
-0002 (  12)		JUMP		<-		{}
-		==> 3
---------------------------------------------------------------------
-ScoreType::getIsAchievement: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/ScoreType.hpp:20
-$00 R0(P), $00 R1(B), 
-L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/ScoreType.cpp
-0000 (  18)		LOADZ2	R0(P)	<-	V(0 '')+0 	{S}
-0001 (  18)		LOADI1	R1(B)	<-	R0(PF)+0	{}
-0002 (  18)		RETV		<-	R1(BF)	{}
---------------------------------------------------------------------
-ScoreType::getIsAchieved: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/ScoreType.hpp:23
-$00 R0(P), $00 R1(B), 
-L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/ScoreType.cpp
-0000 (  26)		LOADZ2	R0(P)	<-	V(0 '')+0 	{S}
-0001 (  26)		LOADI1	R1(B)	<-	R0(PF)+1	{}
-0002 (  26)		RETV		<-	R1(BF)	{}
---------------------------------------------------------------------
-ScoreType::setIsAchieved: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/ScoreType.hpp:24
-$00 R0(P), $00 R1(B), 
-L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/ScoreType.cpp
-0000 (  30)		LOADZ2	R0(P)	<-	V(0 '')+0 	{S}
-0001 (  30)		LOADZ1	R1(B)	<-	V(2 '')+0 	{S}
-0002 (  30)		STOREI1		<-	R0(PF)+1, R1(BF)	{}
-0003 (  31)		RET		<-		{}
---------------------------------------------------------------------
-ScoreType::getAmount: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/ScoreType.hpp:26
-$00 R0(P), 
-L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/ScoreType.cpp
-0000 (  34)		LOADZ2	R0(P)	<-	V(0 '')+0 	{S}
-0001 (  34)		LOADI2	R0(I)[-32768..65535]	<-	R0(PF)+2	{}
-0002 (  34)		RETV		<-	R0(IF)[-32768..65535]	{}
---------------------------------------------------------------------
-Score::getScoreTypes: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/Scores.hpp:15
-$00 R0(P), 
-L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/Scores.cpp
-0000 (  20)		LOADZ2	R0(P)	<-	V(0 '')+0 	{S}
-0001 (  20)		LOADI2	R0(P)	<-	R0(PF)+0	{}
-0002 (  20)		RETV		<-	R0(PF)	{}
---------------------------------------------------------------------
-ScoreType::+ScoreType: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/ScoreType.hpp:33
-$00 R0(P), $02 R1(B), $00 R2(P), $00 R3(I), 
-L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/ScoreType.hpp
-0000 (  10)		LOADZ2	R0(P)	<-	V(6 '')+0 	{S}
-0001 (  33)		LOADI1	R1(B)	<-	R0(P)+0	{}
-0002 (  33)		LOADZ2	R2(P)	<-	V(4 '')+0 	{S}
-0003 (  33)		STOREI1		<-	R2(P)+0, R1(BF)	{}
-0004 (  33)		LOADI1	R1(B)	<-	R0(P)+1	{}
-0005 (  33)		STOREI1		<-	R2(P)+1, R1(BF)	{}
-0006 (  33)		LOADI2	R3(I)[-32768..65535]	<-	R0(P)+2	{}
-0007 (  33)		STOREI2		<-	R2(P)+2, R3(IF)[-32768..65535]	{}
-0008 (  10)		LEAI	R2(P)	<-	R2(PF)+0, CI:4	{S}
-0009 (  10)		STOREZ2		<-	V(0 '')+0 , R2(PF)	{}
-000a (  10)		LEAI	R0(P)	<-	R0(PF)+0, CI:4	{S}
-000b (  10)		STOREZ2		<-	V(2 '')+0 , R0(PF)	{}
-000c (  33)		CALLN		<-	V(11 'opp::string::+string')+0 	{}
-000d (  33)		RET		<-		{}
---------------------------------------------------------------------
 BearGame::renderGame: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/BearGame.hpp:51
 $00 R0(P), 
 L0: <= D-1: (1)  P-1 /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/src/BearGame.cpp
 0000 (  89)		LOADZ2	R0(P)	<-	V(2 '')+0 	{S}
 0001 (  89)		LOADI2	R0(P)	<-	R0(PF)+3	{}
 0002 (  89)		STOREZ2		<-	V(0 '')+0 , R0(PF)	{}
-0003 (  89)		CALLN		<-	V(66 'BearSprite::render')+0 	{}
+0003 (  89)		CALLN		<-	V(59 'BearSprite::render')+0 	{}
 0004 (  90)		RET		<-		{}
 --------------------------------------------------------------------
 BearSprite::render: /run/media/ecte/TOSHIBA-External/misc-code/oscar64/friendly-bear-v0.3/include/BearSprite.hpp:39
